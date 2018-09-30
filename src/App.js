@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Category from './components/Category'
 import './App.css';
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1>Readable</h1>
-        {categories.map(category => ( <li key={category.name}>{category.name}</li>))}
+        {categories.map(category => ( <Category key={category.name} name={category.name} />))}
       </div>
     );
   }
